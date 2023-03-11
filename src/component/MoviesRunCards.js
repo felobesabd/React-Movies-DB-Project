@@ -12,10 +12,8 @@ const MoviesRunCards = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-      dispatch(actionsMov())
-  },)
-
-
+    dispatch(actionsMov())
+  },[])
 
   useEffect(() => {
     setMovies(dataState)

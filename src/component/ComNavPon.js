@@ -5,14 +5,15 @@ import { useDispatch } from 'react-redux';
 import { actionsMov, actionsMovSearch } from '../Reducer/Actions/action.js';
 
 const ComNavPon = () => {
-  const clickSearch = (val) => {
-    search(val)
+  const clickSearch = (word) => {
+    search(word)
+    console.log(word);
   }
 
   const dispatch = useDispatch();
 
       // Function Set Data Search From API 
-      const search= async (word) => {
+      const search= (word) => {
         if (word === '') {
             dispatch(actionsMov())
         }else {

@@ -1,8 +1,10 @@
-import { movies } from "../types/type"
+import { MOVIES } from "../types/type"
 
-export const allMovies = (state = {movie: [], pageCount: 0}, action) => {
+const init = {movie: [], pageCount: 0}
+
+export const allMovies = (state = init, action) => {
     switch (action.type) {
-        case movies:
+        case MOVIES:
             return {movie: action.data, pageCount: action.pages}
         default:
             return state;
